@@ -1,0 +1,22 @@
+%%% обозначение
+\newcommand{\org}{АБВГ}				% код разработчика
+\newcommand{\num}{4362XX.XXX}		% децимальный номер изделия
+\newcommand{\doc}{РЭ}				% код документа
+
+%%% основная надпись
+\ESKDtitle{Коммутатор}						% наименование изделия
+\ESKDdocName{Руководство по эксплуатации}	% наименование документа
+\ESKDsignature{\org.\num-01 \doc}			% обозначение документа
+\ESKDauthor{}								% автор
+\ESKDchecker{}								% проверил
+\ESKDnormContr{}							% нормоконтролер
+\ESKDapprovedBy{\hfill --- \hfill}			% утвердил
+\ESKDcolumnXIfIV{ }							% согласовал
+\ESKDcompany{АО << >>}						% наименование организации
+\ESKDcolumnIX{\ESKDtheCompany}				% наименование организации в штампе
+\ESKDcolumnXXV{\org.\num}					% обозначение документа, в котором впервые записан документ
+
+%%% титульный лист
+\newcommand{\OKPcode}{ }
+\renewcommand{\ESKDtheTitleFieldIl}{\OKPcode}
+\renewcommand{\ESKDtheTitleFieldX}{ }		% год
