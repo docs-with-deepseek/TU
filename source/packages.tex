@@ -14,10 +14,10 @@
 % выбор русского шрифта
 \IfFileExists{pscyr.sty}{%
 	\usepackage{pscyr}\renewcommand{\rmdefault}{ftm}}% ftm -- TimesNewRomanPSMT (Таймс)
-	{\usepackage{literat}}
+	{\IfFileExists{literat.sty}{\usepackage{literat}}{}}
 % решение проблемы копирования текста в буфер обмена
-\input glyphtounicode.tex
-\input glyphtounicode-cmr.tex	% from pdfx package
+\IfFileExists{glyphtounicode.tex}{\input glyphtounicode.tex}{}
+\IfFileExists{glyphtounicode-cmr.tex}{\input glyphtounicode-cmr.tex}{}	% from pdfx package
 \pdfgentounicode=1
 \usepackage{cmap}				% улучшенный поиск русских слов в полученном pdf-файле
 
